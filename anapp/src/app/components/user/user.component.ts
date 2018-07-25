@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-user',
@@ -14,7 +15,7 @@ export class UserComponent implements OnInit {
   hello: any[];
   incr: Incrementing;
 
-  constructor() {
+  constructor(private dataService: DataService) {
     console.log('constructor ran...');
   }
 
@@ -36,6 +37,10 @@ export class UserComponent implements OnInit {
       inc2: 2,
       inc3: 3
     };
+
+    this.dataService.getPosts().subscribe((posts) => {
+      console.log(posts);
+    });
   }
 
   onClick() {
