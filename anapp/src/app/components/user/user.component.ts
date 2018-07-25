@@ -36,6 +36,12 @@ export class UserComponent implements OnInit {
     this.age += 1;
   }
 
+  addHobby(hobby) {
+    console.log(hobby);
+    this.hobbies.unshift(hobby);
+    return false;
+  }
+
 }
 
 
