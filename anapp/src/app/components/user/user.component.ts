@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
   hello: any[];
   incr: Incrementing;
   posts: Post[];
-  isEdit: boolean = false;
+  isEdit: boolean;
 
   constructor(private dataService: DataService) {
     console.log('constructor ran...');
@@ -39,6 +39,8 @@ export class UserComponent implements OnInit {
       inc2: 2,
       inc3: 3
     };
+
+    this.isEdit = true;
 
     this.dataService.getPosts().subscribe((posts) => {
       this.posts = posts;
