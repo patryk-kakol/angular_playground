@@ -14,6 +14,7 @@ export class UserComponent implements OnInit {
   hobbies: string[];
   hello: any[];
   incr: Incrementing;
+  posts: Post[];
 
   constructor(private dataService: DataService) {
     console.log('constructor ran...');
@@ -39,6 +40,7 @@ export class UserComponent implements OnInit {
     };
 
     this.dataService.getPosts().subscribe((posts) => {
+      this.posts = posts;
       console.log(posts);
     });
   }
@@ -84,4 +86,11 @@ interface Incrementing {
   inc1: number;
   inc2: number;
   inc3: number;
+}
+
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+  user_id: number;
 }

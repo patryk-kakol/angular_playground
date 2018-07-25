@@ -89,3 +89,11 @@
         <input type="number" [(ngModel)]="incr.inc3" name="inc3">
     </div>
 </form>
+
+
+
+<h1>POSTS</h1>
+<div *ngFor="let post of posts"> 
+  <h4>{{post.title}}</h4>
+  <p>{{post.body}}</p>
+</div>
