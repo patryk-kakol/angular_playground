@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     console.log('ngOnInit ran...');
     this.name = 'John Doe';
-    this.age = 30;
+    this.age = 15;
     this.email = 'johhnyyd@yo.com';
     this.address = {
       street: 'Cute',
@@ -31,7 +31,14 @@ export class UserComponent implements OnInit {
     this.hello = [1, 2, null, true, 'YO!'];
   }
 
+  onClick() {
+    console.log('Grow up!');
+    this.age += 1;
+  }
+
 }
+
+
 
 
 interface Address {
