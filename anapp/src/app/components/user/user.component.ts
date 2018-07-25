@@ -42,6 +42,18 @@ export class UserComponent implements OnInit {
     return false;
   }
 
+  deleteHobby(hobby) {
+    console.log(hobby);
+    // this.hobbies.forEach( (val, index) => {
+    //   val === hobby ? this.hobbies.splice(index, 1) : null;
+    // });
+    for (let i = 0; i < this.hobbies.length; i++) {
+      if (this.hobbies[i] === hobby) {
+        this.hobbies.splice(i, 1);
+      }
+    }
+  }
+
 }
 
 
