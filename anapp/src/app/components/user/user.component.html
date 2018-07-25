@@ -50,3 +50,42 @@
     {{i + 1}}: {{hobby}} <button (click)="deleteHobby(hobby)">X</button>
   </li>
 </ul>
+
+
+<h2>Incrementing so good:</h2>
+<ul>
+    <li>x++ :{{incr.inc1}}</li>
+    <li>x += 1: {{incr.inc2}}</li>
+    <li>x = Number(x + 1): {{incr.inc3}}</li>
+  </ul>
+  <button (click)="increment()">Click to increment!</button>
+<p>Change values in input fields below, and click button to increment.</p>
+<form action="">
+    <div>
+        <label for="inc1">Case 1:  </label>
+        <input type="text" [(ngModel)]="incr.inc1" name="inc1">
+    </div>
+    <div>
+        <label for="inc2">Case 2:  </label>
+        <input type="text" [(ngModel)]="incr.inc2" name="inc2">
+    </div>
+    <div>
+        <label for="inc3">Case 3:  </label>
+        <input type="text" [(ngModel)]="incr.inc3" name="inc3">
+    </div>
+</form>
+<p>Lesson: input type in html does metter... Try again with ones below:</p>
+<form action="">
+    <div>
+        <label for="inc1">Case 1:  </label>
+        <input type="number" [(ngModel)]="incr.inc1" name="inc1">
+    </div>
+    <div>
+        <label for="inc2">Case 2:  </label>
+        <input type="number" [(ngModel)]="incr.inc2" name="inc2">
+    </div>
+    <div>
+        <label for="inc3">Case 3:  </label>
+        <input type="number" [(ngModel)]="incr.inc3" name="inc3">
+    </div>
+</form>

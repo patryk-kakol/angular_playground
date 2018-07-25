@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
   address: Address;
   hobbies: string[];
   hello: any[];
+  incr: Incrementing;
 
   constructor() {
     console.log('constructor ran...');
@@ -29,11 +30,17 @@ export class UserComponent implements OnInit {
     };
     this.hobbies = ['Write code', 'Read books', 'Skate'];
     this.hello = [1, 2, null, true, 'YO!'];
+
+    this.incr = {
+      inc1: 1,
+      inc2: 2,
+      inc3: 3
+    };
   }
 
   onClick() {
     console.log('Grow up!');
-    this.age += 1;
+    this.age++;
   }
 
   addHobby(hobby) {
@@ -54,10 +61,22 @@ export class UserComponent implements OnInit {
     }
   }
 
+  increment() {
+    this.incr.inc1++;
+    this.incr.inc2 += 1;
+    this.incr.inc3 = Number(this.incr.inc3 + 1);
+  }
+
 }
 
 interface Address {
   street: string;
   city: string;
   home_number: number;
+}
+
+interface Incrementing {
+  inc1: number;
+  inc2: number;
+  inc3: number;
 }
