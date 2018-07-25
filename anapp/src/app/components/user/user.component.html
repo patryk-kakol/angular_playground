@@ -2,10 +2,39 @@
 <ul>
   <li>Age {{age}}</li>
   <li>Email: {{email}}</li>
-  <li>{{address.street}} {{address.street_number}}, {{address.city}}</li>
+  <li>{{address.street}} {{address.home_number}}, {{address.city}}</li>
 </ul>
 
 <button (click)="onClick()">CLICK ME!</button>
+
+<h2>Edit User</h2>
+<form action="">
+    <div>
+        <label for="name">Name:  </label>
+        <input type="text" [(ngModel)]="name" name="name">
+    </div>
+    <div>
+        <label for="age">Age:  </label>
+        <input type="text" [(ngModel)]="age" name="age">
+    </div>
+    <div>
+        <label for="email">Email:  </label>
+        <input type="text" [(ngModel)]="email" name="email">
+    </div>
+    <div>
+        <label for="street">Street:  </label>
+        <input type="text" [(ngModel)]="address.street" name="street">
+    </div>
+    <div>
+        <label for="home_number">Home number:  </label>
+        <input type="text" [(ngModel)]="address.home_number" name="home_number">
+    </div>
+    <div>
+        <label for="city">City:  </label>
+        <input type="text" [(ngModel)]="address.city" name="city">
+    </div>
+</form>
+
 
 <h2>Hobbies: </h2>
 

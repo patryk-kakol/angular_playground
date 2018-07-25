@@ -25,7 +25,7 @@ export class UserComponent implements OnInit {
     this.address = {
       street: 'Cute',
       city: 'Gdansk',
-      street_number: 66
+      home_number: 66
     };
     this.hobbies = ['Write code', 'Read books', 'Skate'];
     this.hello = [1, 2, null, true, 'YO!'];
@@ -56,11 +56,8 @@ export class UserComponent implements OnInit {
 
 }
 
-
-
-
 interface Address {
   street: string;
   city: string;
-  street_number: number;
+  home_number: number;
 }
