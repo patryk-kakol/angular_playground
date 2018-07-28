@@ -7,18 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isVisible = false;
-  clicksLog: number[] = [];
-  clicksCount = 0;
+  clicksLog = [];
 
   onClick() {
     this.isVisible = !this.isVisible;
-    this.clicksCount++;
-    this.clicksLog.push(+ new Date());
-    console.log(this.clicksLog);
-    console.log(this.clicksLog.length);
-  }
-
-  getColor() {
-    return this.clicksLog.length >= 5 ? 'blue' : 'transparent';
+    this.clicksLog.push(new Date());
   }
 }

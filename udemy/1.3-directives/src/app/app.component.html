@@ -15,29 +15,12 @@
       <button class="btn btn-primary" (click)="onClick()">Display Details</button>
       <br><br>
       <p class="well" *ngIf="isVisible">Secret Password = kaczka</p>
-      <br>
       <div 
         *ngFor="let item of clicksLog; let i = index"
-        
         [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
         [ngClass]="{'white-text': i >= 5}">
         {{item}}
       </div>
-            
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     </div>
   </div>
 </div>
