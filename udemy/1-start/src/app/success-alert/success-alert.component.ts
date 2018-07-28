@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   <h3>This is success component!</h3>
   `,
   styles: [`
-    h3 {
-      color: green
-    }`]
+  h3 {
+    padding: 20px;
+    background-color: greenyellow;
+    border: 5px solid green;
+    color: darkgreen;
+  }`]
 })
 export class SuccessAlertComponent implements OnInit {
 
