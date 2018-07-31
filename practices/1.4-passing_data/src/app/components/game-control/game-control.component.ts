@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+// import { EventEmitter } from '../../../../node_modules/protractor';
 
 @Component({
   selector: 'app-game-control',
@@ -6,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent implements OnInit {
-  currentNum = 0;
+  @Output() counterFired = new EventEmitter<number>();
   counter;
+  currentNumber = 0;
 
   constructor() { }
 
   ngOnInit() {}
 
   onStart() {
-    this.counter = setInterval( () => this.currentNum++, 1000);
+    this.counter = setInterval( () => {
+      this.counterFired.emit(this.currentNumber);
+      this.currentNumber++;
+    }, 1000);
   }
 
   onStop() {

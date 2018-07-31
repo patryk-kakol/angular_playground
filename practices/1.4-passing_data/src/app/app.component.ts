@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  onCounterFired(newNumber: number) {
+    console.log(newNumber);
+  }
 }
