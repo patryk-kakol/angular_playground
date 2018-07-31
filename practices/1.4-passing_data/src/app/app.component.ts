@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onCounterFired(newNumber: number) {
-    console.log(newNumber);
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+  onCounterFired(num: number) {
+    num % 2 === 0 ? this.evenNumbers.push(num) : this.oddNumbers.push(num);
   }
 }

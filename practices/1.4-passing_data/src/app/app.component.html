@@ -16,4 +16,13 @@
   </div>
   <hr>
   <app-game-control (counterFired)="onCounterFired($event)"></app-game-control>
+  <hr>
+  <div class="row">
+    <div class="col-xs-4">
+        <app-even *ngFor="let item of evenNumbers" [number]="item"></app-even>
+    </div>
+    <div class="col-xs-4">
+      <app-odd *ngFor="let item of oddNumbers" [number]="item"></app-odd>
+    </div>
+  </div>
 </div>
