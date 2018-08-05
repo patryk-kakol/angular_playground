@@ -1,12 +1,19 @@
 export class LoggingService {
-  counter: number;
+  inactiveToActiveCounter = 0;
+  activeToInactiveCounter = 0;
 
-  constructor() {
-    this.counter = 0;
+  log() {
+    console.log(`Inactive to active: ${this.inactiveToActiveCounter} | Active to inactive: ${this.activeToInactiveCounter}`);
   }
 
-  incerment() {
-    this.counter++;
-    console.log(`Operation number: ${this.counter}`);
+  incermentInactiveToActive() {
+    this.inactiveToActiveCounter++;
+    this.log();
   }
+
+  incermentActivetoInactive() {
+    this.activeToInactiveCounter++;
+    this.log();
+  }
+
 }
