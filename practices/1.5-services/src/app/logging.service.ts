@@ -1,3 +1,6 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
 export class LoggingService {
   inactiveToActiveCounter = 0;
   activeToInactiveCounter = 0;

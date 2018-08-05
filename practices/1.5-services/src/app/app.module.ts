@@ -6,8 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
-import { UsersService } from './users.service';
-import { LoggingService } from './logging.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +18,7 @@ import { LoggingService } from './logging.service';
     FormsModule,
     HttpModule
   ],
-  providers: [UsersService, LoggingService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
