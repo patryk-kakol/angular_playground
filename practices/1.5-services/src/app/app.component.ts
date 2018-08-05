@@ -8,6 +8,4 @@ import { UsersService } from './users.service';
 })
 export class AppComponent {
 
-  constructor(private usersService: UsersService) {}
-
 }
