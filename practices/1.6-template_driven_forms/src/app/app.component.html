@@ -26,6 +26,7 @@
               required
               email
               >
+              <span class="help-block" *ngIf="!f.valid">Please fill the field correctly.</span>
           </div>
           <div class="form-group">
               <label for="secret">Subscriptions</label>
@@ -50,6 +51,7 @@
                   required
                   password
                   >
+                  <span class="help-block" *ngIf="!f.valid">Please fill the field correctly.</span>
               </div>
               <button
                 class="btn btn-primary"
