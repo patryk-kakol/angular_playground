@@ -14,7 +14,7 @@
            Optionally, display it in your template.
 
       <br><br>
-        <form>
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
           <div class="form-group">
             <label for="email">Mail</label>
             <input
@@ -32,7 +32,7 @@
               <select
                 id="subscriptions"
                 class="form-control"
-                [ngModel]="subscriptions"
+                [ngModel]="subscription"
                 name="subscriptions">
                 <option value="basic">Basic</option>
                 <option value="advanced">Advanced</option>
@@ -57,5 +57,13 @@
                 >Submit</button>
         </form>
     </div>
+    <div class="row" *ngIf="submitted">
+        <div class="col-xs-12">
+          <h3>Your Data:</h3>
+          <p>Mail: {{ mail }}</p>
+          <p>Subscription type: {{ subscription }}</p>
+          <p>Password: {{ password }}</p>
+        </div>
+      </div>
   </div>
 </div>
