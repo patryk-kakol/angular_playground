@@ -56,6 +56,7 @@
                 type="submit"
                 >Submit</button>
         </form>
+        <span class="help-block" *ngIf="!f.valid && f.touched">Please fill all fields.</span>
     </div>
     <div class="row" *ngIf="submitted">
         <div class="col-xs-12">
