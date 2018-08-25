@@ -14,11 +14,9 @@ export class AppComponent {
   submitted = false;
 
   onSubmit() {
-    this.submitted = true;
     this.email = this.signupForm.value.email;
     this.subscription = this.signupForm.value.subscription;
     this.password = this.signupForm.value.password;
-
+    this.submitted = true;
   }
-
 }

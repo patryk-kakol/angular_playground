@@ -24,9 +24,12 @@
               ngModel
               name="email"
               required
-              email
-              >
-              <span class="help-block" *ngIf="!f.valid">Please fill the field correctly.</span>
+              email>
+              <span class="help-block"
+                  *ngIf="f.form.controls.email
+                  && f.form.controls.email.touched
+                  && !f.form.controls.email.valid ">
+                  Please fill the field correctly.</span>
           </div>
           <div class="form-group">
               <label for="secret">Subscriptions</label>
@@ -48,10 +51,12 @@
                   class="form-control"
                   ngModel
                   name="password"
-                  required
-                  password
-                  >
-                  <span class="help-block" *ngIf="!f.valid">Please fill the field correctly.</span>
+                  required>
+                  <span class="help-block"
+                  *ngIf="f.form.controls.password
+                  && f.form.controls.password.touched
+                  && !f.form.controls.password.valid ">
+                  Please fill the field correctly.</span>
               </div>
               <button
                 class="btn btn-primary"
@@ -60,7 +65,7 @@
         </form>
         <span class="help-block" *ngIf="!f.valid && f.touched">Please fill all fields.</span>
     </div>
-    <div class="row" *ngIf="submitted">
+    <div class="row" *ngIf="f.submitted">
         <div class="col-xs-12">
           <h3>Your Data:</h3>
           <p>Mail: {{ email }}</p>
