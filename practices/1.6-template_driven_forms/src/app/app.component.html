@@ -34,7 +34,7 @@
                 id="subscriptions"
                 class="form-control"
                 [ngModel]="subscription"
-                name="subscriptions">
+                name="subscription">
                 <option value="basic">Basic</option>
                 <option value="advanced">Advanced</option>
                 <option value="pro">Pro</option>
@@ -63,7 +63,7 @@
     <div class="row" *ngIf="submitted">
         <div class="col-xs-12">
           <h3>Your Data:</h3>
-          <p>Mail: {{ mail }}</p>
+          <p>Mail: {{ email }}</p>
           <p>Subscription type: {{ subscription }}</p>
           <p>Password: {{ password }}</p>
         </div>
